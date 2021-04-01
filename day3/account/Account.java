@@ -46,5 +46,12 @@ public class Account {
 	public void setPolicies(Policy[] policies) {
 		this.policies = policies;
 	}
+	
+	public void showDetails() {
+		System.out.println("===The Account Details are===");
+		System.out.println("Account Number: " + this.getAccountNumber());
+		System.out.println("Account Holder Name: " + this.getAccountHolderName());
+		System.out.println("Account Balance: " + this.getBalance());
+	}
 
 }

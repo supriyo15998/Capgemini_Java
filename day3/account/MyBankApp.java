@@ -30,11 +30,11 @@ public class MyBankApp {
 
 		Account a1 = new Account(accountNumber, holderName, accountBalance, policies);
 		// Display Information
-		printAccountDetails(a1);
+		a1.showDetails();
 		// Display Information Related to Policies
 		System.out.println("===Policies Related to Account " + a1.getAccountNumber() + " =====");
 		for (Policy policy : a1.getPolicies()) {
-			printPolicyDetails(policy);
+			policy.showDetails();
 		}
 		// get the policy by Id for specific account
 		System.out.println("Enter the Amount for which the Policy Id is required");
@@ -45,7 +45,7 @@ public class MyBankApp {
 
 			if (policy.getPolicyAmount() == searchAmount) {
 				System.out.println("Policy Found with Amount: " + searchAmount);
-				printPolicyDetails(policy);
+				policy.showDetails();
 				flag = true;
 
 			}
@@ -54,20 +54,6 @@ public class MyBankApp {
 		if (!flag)
 			System.out.println("No Policy Found with Amount: " + searchAmount);
 
-	}
-
-	private static void printPolicyDetails(Policy policy) {
-		System.out.println("Policy Id: " + policy.getPolicyId());
-		System.out.println("Policy Name: " + policy.getPolicyName());
-		System.out.println("Policy Amount: " + policy.getPolicyAmount());
-		System.out.println("-----------------------------------");
-	}
-
-	private static void printAccountDetails(Account account) {
-		System.out.println("===The Account Details are===");
-		System.out.println("Account Number: " + account.getAccountNumber());
-		System.out.println("Account Holder Name: " + account.getAccountHolderName());
-		System.out.println("Account Balance: " + account.getBalance());
 	}
 
 }

@@ -35,5 +35,14 @@ public class Policy {
 	public void setPolicyAmount(int policyAmount) {
 		this.policyAmount = policyAmount;
 	}
-	
+
+	public void showDetails() {
+
+		System.out.println("Policy Id: " + this.getPolicyId());
+		System.out.println("Policy Name: " + this.getPolicyName());
+		System.out.println("Policy Amount: " + this.getPolicyAmount());
+		System.out.println("-----------------------------------");
+
+	}
+
 }
