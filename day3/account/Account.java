@@ -7,12 +7,11 @@ public class Account {
 
 	private Policy policies[]; // collections
 
-	public Account(int accountNumber, String accountHolderName, int balance, Policy[] policies) {
+	public Account(int accountNumber, String accountHolderName, int balance) {
 		super();
 		this.accountNumber = accountNumber;
 		this.accountHolderName = accountHolderName;
 		this.balance = balance;
-		this.policies = policies;
 	}
 
 	public int getAccountNumber() {

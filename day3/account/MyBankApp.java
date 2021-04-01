@@ -28,7 +28,8 @@ public class MyBankApp {
 		System.out.println("Enter Account Balance");
 		int accountBalance = sc.nextInt();
 
-		Account a1 = new Account(accountNumber, holderName, accountBalance, policies);
+		Account a1 = new Account(accountNumber, holderName, accountBalance);
+		a1.setPolicies(policies);
 		// Display Information
 		a1.showDetails();
 		// Display Information Related to Policies
