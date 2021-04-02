@@ -166,7 +166,7 @@ public class Flight {
 			finalFareTime = (int) (this.getBaseFair() * percentageTime);
 
 		}
-		this.setFinalCost(this.baseFair + finalFareTime);
+		this.setFinalCost(this.getFinalCost() + finalFareTime);
 		FriendlyCountry f = new FriendlyCountry();
 		double percentageCountry = 0;
 		for (String fCountry : f.countries) {
@@ -177,8 +177,8 @@ public class Flight {
 			}
 		}
 		finalFareCountry = (int) (this.getBaseFair() * percentageCountry);
-		this.setFinalCost(this.baseFair+finalFareCountry);
-		this.setFinalCost(this.baseFair+this.internationFlyTax);
+		this.setFinalCost(this.getFinalCost()+finalFareCountry);
+		this.setFinalCost(this.getFinalCost()+this.internationFlyTax);
 		finalCost = this.getFinalCost();
 		System.out.println("-----FARE BREAKUP-----");
 		System.out.println("Base Fare: " + this.getBaseFair() + " (Includes 5% ( " + (this.getBaseFair() * (5.0 / 100))
